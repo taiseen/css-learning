@@ -1,0 +1,11 @@
+:root {
+    --bg-color: rgb(20, 20, 20);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
