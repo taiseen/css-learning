@@ -34,6 +34,7 @@
         const handleOnMouseMove = (e) => {
             const { currentTarget: target } = e;
 
+            // get details location about this dom object...
             const rect = target.getBoundingClientRect();
 
             const x = e.clientX - rect.left;
