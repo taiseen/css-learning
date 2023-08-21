@@ -14,36 +14,53 @@
 
 <body>
 
-    <div id="cards">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+    <div id="card-container">
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
+        <div class="card">
+            <div class="card-border"></div>
+            <div class="card-content"></div>
+        </div>
     </div>
 
 
     <script>
-        const allCards = document.querySelectorAll(".card");
+        const cardContainer = document.getElementById("card-container");
 
-        for (const card of allCards) {
-            card.onmousemove = (e) => handleOnMouseMove(e);
-        }
+        cardContainer.addEventListener('mouseover', (e) => {
 
-        const handleOnMouseMove = (e) => {
-            const { currentTarget: target } = e;
+            const allCards = document.getElementsByClassName("card");
 
-            // get details location about this dom object...
-            const rect = target.getBoundingClientRect();
+            for (const card of allCards) {
+                // get details location about this dom object...
+                const rect = card.getBoundingClientRect();
 
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-            // dynamically update css value by these variables
-            target.style.setProperty("--mouse-x", `${x}px`);
-            target.style.setProperty("--mouse-y", `${y}px`);
-        };
+                // dynamically update css value by these variables
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            }
+        })
     </script>
 </body>
 
