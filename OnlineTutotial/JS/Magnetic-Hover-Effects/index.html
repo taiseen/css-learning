@@ -62,7 +62,7 @@
             const moveX = xInsideBox - boxWidth / 2;
             const moveY = yInsideBox - boxHeight / 2;
 
-            box.style.transform = `translate(${moveX}px, ) translateY(${moveY}px)`;
+            box.style.transform = `translate(${moveX}px) translateY(${moveY}px)`;
         })
 
         box.addEventListener('mouseout', e => box.style.transform = '')
