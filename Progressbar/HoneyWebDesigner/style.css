@@ -1,0 +1,34 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #CCC;
+    height          : 100vh;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.container {
+    padding         : 8px 10px;
+    border-radius   : 4px;
+    background-color: azure;
+
+    display       : flex;
+    flex-direction: column;
+    gap           : 16px;
+}
+
+.fileLabel {
+    padding      : 4px 6px;
+    border       : 1px solid black;
+    cursor       : pointer;
+    border-radius: 4px;
+}
+
+.progressArea {
+    text-align: center;
+}
