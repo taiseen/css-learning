@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Wheel Game</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>Winner <span id="winner">None</span> </h2>
+    </div>
+
+    <div class="wheel">
+        <canvas class="" id="canvas" width="500" height="500"></canvas>
+
+        <div class="centerCircle">
+            <div class="triangle"></div>
+        </div>
+    </div>
+
+    <div class="inputArea" onchange="userNewInput()">
+        <textarea>
+cat
+dog
+cow
+duck
+got
+bird
+sheep
+hen</textarea>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
