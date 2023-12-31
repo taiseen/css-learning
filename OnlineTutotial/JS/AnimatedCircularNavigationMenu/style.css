@@ -1,0 +1,76 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    min-height     : 100vh;
+    background     : linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+.navMenu {
+    position       : relative;
+    width          : 200px;
+    height         : 200px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.navMenu li {
+    position        : absolute;
+    left            : 0px;
+    list-style      : none;
+    transform-origin: 100px;
+    transition      : .5s;
+    transition-delay: calc(.1s * var(--i));
+    transform       : rotate(0deg) translateX(80px);
+    /* animation happen from center for this line of code */
+}
+
+.navMenu li a {
+    width           : 40px;
+    height          : 40px;
+    background-color: #fff;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-radius   : 50%;
+    transform       : rotate(calc(360deg / -8 * var(--i)));
+    box-shadow      : 0 3px 4px rgba(0, 0, 0, .15);
+    color           : #111;
+    transition      : .5s;
+}
+
+.navMenu li a:hover {
+    color: tomato;
+}
+
+.toggleBtn {
+    position        : absolute;
+    width           : 60px;
+    height          : 60px;
+    background-color: #fff;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    z-index         : 10000;
+    border-radius   : 50%;
+    cursor          : pointer;
+    font-size       : 2em;
+    box-shadow      : 0 0 4px rgba(0, 0, 0, .15);
+    transition      : transform 1.25s;
+}
+
+.navMenu.show .toggleBtn {
+    transform: rotate(315deg);
+}
+
+.navMenu.show li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    /* animation happen from center for this line of code */
+}
