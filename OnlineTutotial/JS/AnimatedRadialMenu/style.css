@@ -1,0 +1,87 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: #2f363a;
+}
+
+body {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    min-height     : 100vh;
+    background     : var(--bgColor);
+}
+
+.navMenu {
+    position       : relative;
+    width          : 280px;
+    height         : 280px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.toggleBtn {
+    position       : absolute;
+    width          : 60px;
+    height         : 60px;
+    background     : var(--bgColor);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    z-index        : 10000;
+    border-radius  : 50%;
+    color          : #FFF;
+    border         : 2px solid #FFF;
+    cursor         : pointer;
+    font-size      : 2em;
+    box-shadow     : 0 0 4px rgba(0, 0, 0, .15);
+    transition     : transform 1.25s;
+}
+
+.navMenu.show .toggleBtn {
+    transform: rotate(315deg);
+}
+
+.navMenu li {
+    position        : absolute;
+    left            : 0px;
+    list-style      : none;
+    transition      : .5s;
+    transform-origin: 140px;
+    transition-delay: calc(.1s * var(--i));
+    transform       : rotate(0deg) translateX(110px);
+    /* animation happen from center for this line of code */
+}
+
+.navMenu.show li {
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(0px);
+    /* animation happen from center for this line of code */
+}
+
+.navMenu li a {
+    width          : 60px;
+    height         : 60px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    color          : var(--clr);
+    border         : 2px solid var(--clr);
+    border-radius  : 50%;
+    font-size      : 1.5em;
+    transition     : 1s;
+    transform      : rotate(calc(360deg / -8 * var(--i)));
+}
+
+.navMenu li a:hover {
+    transition      : 0s;
+    color           : #333;
+    background-color: var(--clr);
+    box-shadow      : 0 0 10px var(--clr),
+        0 0 30px var(--clr),
+        0 0 50px var(--clr);
+}
