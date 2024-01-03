@@ -1,0 +1,70 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white         : #ffffff;
+    --bgColor       : #edf1f4;
+    --sliderThumb   : #0074cf;
+    --thumbBoxShadow: #27a0ff;
+}
+
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    min-height      : 100vh;
+    background-color: var(--bgColor);
+}
+
+.box {
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 20px;
+    background     : linear-gradient(to bottom, rgba(0, 0, 0, .05), var(--bgColor));
+    border-radius  : 40px;
+    box-shadow     : 15px 15px 20px rgba(0, 0, 0, .1),
+        -15px -15px 20px var(--white);
+}
+
+#inputRange {
+    overflow        : hidden;
+    appearance      : none;
+    outline         : none;
+    width           : 400px;
+    height          : 15px;
+    border-radius   : 15px;
+    background-color: var(--bgColor);
+    inset           : 5px 5px 5px rgba(0, 0, 0, .1);
+    box-shadow      : 5px 5px 5px rgba(0, 0, 0, .1), -5px -5px 10px var(--white);
+}
+
+#inputRange::-webkit-slider-thumb {
+    appearance      : none;
+    cursor          : pointer;
+    width           : 15px;
+    height          : 15px;
+    border-radius   : 50%;
+    background-color: var(--white);
+    border          : 2px solid var(--sliderThumb);
+    box-shadow      : -407px 0 0 400px var(--thumbBoxShadow);
+}
+
+#rangeValue {
+    position        : relative;
+    text-align      : center;
+    width           : 60px;
+    font-size       : 1.25em;
+    font-weight     : 500;
+    color           : var(--white);
+    background-color: var(--thumbBoxShadow);
+    margin-left     : 15px;
+    border-radius   : 25px;
+    box-shadow      : 5px 5px 10px rgba(0, 0, 0, .1), -5px -5px 10px var(--white);
+    inset           : 5px 5px 10px rgba(0, 0, 0, .1);
+    inset           : -5px -5px 5px rgba(255, 255, 255, .25);
+}

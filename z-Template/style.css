@@ -1,0 +1,17 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: #edf1f4;
+}
+
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    min-height      : 100vh;
+    background-color: var(--bgColor);
+}
