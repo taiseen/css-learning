@@ -6,12 +6,13 @@
 
 :root {
     --bgColor: #664aff;
+    --white  : #fff;
 }
 
 body {
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
+    display         : grid;
+    place-items     : center;
+    text-align      : center;
     min-height      : 100vh;
     background-color: var(--bgColor);
     font-family     : 'Courier New', Courier, monospace;
@@ -20,42 +21,48 @@ body {
 .container {
     height          : 80px;
     width           : 380px;
-    background-color: white;
+    background-color: var(--white);
     border-radius   : 10px;
     padding         : 0 65px 0 45px;
 }
 
 .container .sliderValue {
-    position        : relative;
-    width           : 100%;
+    position: relative;
+    width   : 100%;
 }
 
 .container .sliderValue span {
     position        : absolute;
     height          : 45px;
     width           : 45px;
-    background-color: var(--bgColor);
-    color           : #fff;
+    color           : var(--white);
     font-weight     : 600;
     top             : -40px;
-    transform       : translateX(-50%);
+    transform       : translateY(-50%) scale(0);
+    transform-origin: bottom;
+    transition      : transform .3s ease-in-out;
     line-height     : 55px;
     z-index         : 2;
+}
+
+.container .sliderValue span.show {
+    transform: translateX(-50%) scale(1);
 }
 
 .container .sliderValue span::after {
-    position        : absolute;
-    height          : 45px;
-    width           : 45px;
-    background-color: var(--bgColor);
-    color           : #fff;
-    font-weight     : 600;
-    top             : -40px;
-    transform       : translateX(-50%);
-    line-height     : 55px;
-    z-index         : 2;
+    content                  : '';
+    position                 : absolute;
+    height                   : 45px;
+    width                    : 45px;
+    left                     : 50%;
+    transform                : translateX(-50%) rotate(45deg);
+    background-color         : var(--bgColor);
+    border                   : 3px solid var(--white);
+    z-index                  : -1;
+    border-top-left-radius   : 50%;
+    border-top-right-radius  : 50%;
+    border-bottom-left-radius: 50%;
 }
-
 
 .inputContainer {
     position       : relative;
@@ -80,12 +87,29 @@ body {
     right: -43px;
 }
 
-.inputContainer input {
+.inputContainer input[type="range"] {
     -webkit-appearance: none;
+    appearance        : none;
     height            : 3px;
     width             : 100%;
     outline           : none;
     border            : none;
     border-radius     : 5px;
-    background-color  : #ddd;
+    background        : #ddd;
+    accent-color      : coral !important;
+}
+
+.inputContainer input[type="range"]::-webkit-slider-thumb {
+    appearance   : none;
+    height       : 20px;
+    width        : 20px;
+    background   : var(--bgColor);
+    border-radius: 50%;
+    border       : 1px solid var(--bgColor);
+    cursor       : pointer;
+}
+
+.inputContainer input[type="range"]::-webkit-slider-runnable-track,
+.inputContainer input[type="range"]::-moz-range-progress {
+    background: var(--bgColor);
 }
