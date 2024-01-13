@@ -1,0 +1,91 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: #664aff;
+}
+
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    min-height      : 100vh;
+    background-color: var(--bgColor);
+    font-family     : 'Courier New', Courier, monospace;
+}
+
+.container {
+    height          : 80px;
+    width           : 380px;
+    background-color: white;
+    border-radius   : 10px;
+    padding         : 0 65px 0 45px;
+}
+
+.container .sliderValue {
+    position        : relative;
+    width           : 100%;
+}
+
+.container .sliderValue span {
+    position        : absolute;
+    height          : 45px;
+    width           : 45px;
+    background-color: var(--bgColor);
+    color           : #fff;
+    font-weight     : 600;
+    top             : -40px;
+    transform       : translateX(-50%);
+    line-height     : 55px;
+    z-index         : 2;
+}
+
+.container .sliderValue span::after {
+    position        : absolute;
+    height          : 45px;
+    width           : 45px;
+    background-color: var(--bgColor);
+    color           : #fff;
+    font-weight     : 600;
+    top             : -40px;
+    transform       : translateX(-50%);
+    line-height     : 55px;
+    z-index         : 2;
+}
+
+
+.inputContainer {
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100%;
+}
+
+.inputContainer .value {
+    position   : absolute;
+    font-size  : 18px;
+    font-weight: 600;
+    color      : var(--bgColor);
+}
+
+.inputContainer .value.left {
+    left: -22px;
+}
+
+.inputContainer .value.right {
+    right: -43px;
+}
+
+.inputContainer input {
+    -webkit-appearance: none;
+    height            : 3px;
+    width             : 100%;
+    outline           : none;
+    border            : none;
+    border-radius     : 5px;
+    background-color  : #ddd;
+}
