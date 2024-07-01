@@ -71,12 +71,11 @@ const projects = [
     {
         name: 'Layout-3',
         link: '../LayoutSystem/Flex/layout-3/index.html',
+    }, 
+    {
+        name: 'Animate On Scroll',
+        link: './SnippetsCode/AnimateOnScroll/index.html',
     },
-    
-    // {
-    //     name: 'Animate On Scroll',
-    //     link: './SnippetsCode/AnimateOnScroll/index.html',
-    // },
     // {
     //     name: 'Multi Level Menu',
     //     link: './SnippetsCode/MultiLevelMenu/index.html',
