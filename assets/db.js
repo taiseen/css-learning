@@ -76,10 +76,10 @@ const projects = [
         name: 'Animate On Scroll',
         link: './SnippetsCode/AnimateOnScroll/index.html',
     },
-    // {
-    //     name: 'Multi Level Menu',
-    //     link: './SnippetsCode/MultiLevelMenu/index.html',
-    // },
+    {
+        name: 'Multi Level Menu',
+        link: './SnippetsCode/MultiLevelMenu/index.html',
+    },
 ]
 
 export default projects;
