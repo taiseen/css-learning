@@ -31,7 +31,6 @@ const projects = [
         name: 'Range-Slider-Custom-Animated',
         link: './OnlineTutotial/JS/Range-Slider-Custom-Animated/index.html',
     },
-
     {
         name: 'SpinWheel Canvas',
         link: './SpinWheel/codecc/index.html',
@@ -79,6 +78,10 @@ const projects = [
     {
         name: 'Multi Level Menu',
         link: './SnippetsCode/MultiLevelMenu/index.html',
+    },
+    {
+        name: 'Table v1 - Green',
+        link: './ResponsiveTable/table-v1/index.html',
     },
 ]
 
