@@ -83,6 +83,10 @@ const projects = [
         name: 'Table v1 - Green',
         link: './ResponsiveTable/table-v1/index.html',
     },
+    {
+        name: 'Table v2 - Student Table',
+        link: './ResponsiveTable/table-v2/index.html',
+    },
 ]
 
 export default projects;
