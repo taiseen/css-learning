@@ -80,12 +80,16 @@ const projects = [
         link: './SnippetsCode/MultiLevelMenu/index.html',
     },
     {
-        name: 'Table v1 - Green',
+        name: 'Table v1 - Product Table',
         link: './ResponsiveTable/table-v1/index.html',
     },
     {
         name: 'Table v2 - Student Table',
         link: './ResponsiveTable/table-v2/index.html',
+    },
+    {
+        name: 'Table v3 - Student Table | Name Heading',
+        link: './ResponsiveTable/table-v3/index.html',
     },
 ]
 

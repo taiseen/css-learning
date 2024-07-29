@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+
+/* 29 Dec 2021 */
+
+* {
+    margin     : 0;
+    padding    : 0;
+    border     : 0;
+    outline    : none;
+    box-sizing : border-box;
+    font-family: 'Poppins', sans-serif;
+    transition : all .2s linear;
+}
+
+body {
+    min-height     : 100vh;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    background     : #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead tr th {
+    background: #333;
+    color     : #fff;
+}
+
+table tbody {
+    background: #fff;
+    color     : #555;
+}
+
+table thead tr th,
+table tbody tr td {
+    padding  : .8rem;
+    font-size: 1.4rem;
+}
+
+
+/* target device --> lower then 600px  */
+@media screen and (max-width : 768px) {
+
+    table {
+        margin: 40px auto;
+        
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody {
+        background: #555;
+        
+    }
+
+    /* tr {
+        margin-bottom: 10px;
+    } */
+
+    td {
+        display   : block;
+        text-align: right;
+        position  : relative;
+    }
+
+    /* tr {
+        border       : 2px solid red;
+        margin-bottom: 50px;
+    } */
+
+    /* td:last-child {
+        background-color: yellow;
+        margin-bottom   : 50px;
+    } */
+
+    td::before,
+    td::after {
+        margin-right: 3rem;
+        font-weight : bold;
+    }
+
+    td::before {
+        float: left;
+    }
+
+    td::after {
+        position: absolute;
+        left    : 102px;
+    }
+
+    td:nth-child(1) {
+        background: #333;
+        color     : #fff;
+        text-align: center;
+    }
+
+    td:nth-child(2)::before {
+        content: "Age"
+    }
+
+    td:nth-child(3)::before {
+        content: "Marks"
+    }
+
+    td:nth-child(4)::before {
+        content: "Status"
+    }
+
+
+    td:nth-child(2)::after {
+        content: ":"
+    }
+
+    td:nth-child(3)::after {
+        content: ":"
+    }
+
+    td:nth-child(4)::after {
+        content: ":"
+    }
+
+}
