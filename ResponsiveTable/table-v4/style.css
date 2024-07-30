@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 1 Jan 2022 */
+
+* {
+    margin         : 0;
+    padding        : 0;
+    border         : 0;
+    outline        : none;
+    list-style     : none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing     : border-box;
+    font-family    : 'Nunito', sans-serif;
+    transition     : all .1s linear;
+}
+
+:root {
+    --thead-BG    : #d9f0fc;
+    --td-BG       : #6FCFFF;
+    --td-BG-Mobile: #F3F6Fa;
+}
+
+.container {
+    min-height     : 100vh;
+    width          : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-direction : column;
+}
+
+
+.table {
+    min-width      : 300px;
+    margin         : 10px auto 0;
+    border-collapse: collapse;
+    border-radius  : 5px;
+
+}
+
+thead {
+    background-color: var(--thead-BG);
+}
+
+th,
+td {
+    border : 1px solid var(--td-BG);
+    padding: 5px 10px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+
+    table {
+        width: 80%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr,
+    td {
+        display      : block;
+        border-bottom: 0;
+    }
+
+    td:last-child {
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--td-BG);
+    }
+
+    td {
+        position    : relative;
+        padding-left: 35%;
+    }
+
+    td::before {
+        content         : attr(data-col-title);
+        position        : absolute;
+        top             : 0px;
+        left            : 0px;
+        padding         : 5px;
+        width           : 30%;
+        font-weight     : bold;
+        background-color: var(--td-BG-Mobile);
+    }
+
+}
