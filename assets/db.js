@@ -95,6 +95,10 @@ const projects = [
         name: 'Table v4 - Student Table | Row Gap',
         link: './projects/ResponsiveTable/table-v4/index.html',
     },
+    {
+        name: 'Table style - v1',
+        link: './projects/ResponsiveTable/table-style-v1/index.html',
+    },
 ]
 
 export default projects;
