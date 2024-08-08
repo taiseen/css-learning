@@ -99,6 +99,10 @@ const projects = [
         name: 'Table style - v1',
         link: './projects/ResponsiveTable/table-style-v1/index.html',
     },
+    {
+        name: 'Table style - v2',
+        link: './projects/ResponsiveTable/table-style-v2/index.html',
+    },
 ]
 
 export default projects;

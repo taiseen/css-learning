@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 22 Dec 2021 */
+
+* {
+    margin            : 0;
+    padding           : 0;
+    border            : 0;
+    outline           : none;
+    list-style        : none;
+    text-decoration   : none;
+    scroll-behavior   : smooth;
+    box-sizing        : border-box;
+    font-family       : 'Nunito', sans-serif;
+    transition        : all .1s linear;
+    /* overflow       : hidden; */
+    /* user-select    : none; */
+}
+
+.table-div {
+    margin: 50px auto;
+}
+
+
+
+.table-row {
+    display   : table;
+    width     : 80%;
+    margin    : 10px auto;
+    padding   : 12px 0;
+    background: transparent;
+    color     : #555;
+    font-size : 1rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
+}
+
+/* 
+    CSS Rules Writing Order is very important. 
+    Otherwise its over-ride another CSS Rule 
+    & CSS Properties Rules won't work properly.
+*/
+
+.table-header {
+    background-color: #8665F5;
+    box-shadow      : none;
+    color           : #fff;
+    font-weight     : 700;
+    font-size       : 1.5rem
+}
+
+.table-header .table-cell {
+    border-right: none;
+}
+
+.table-cell {
+    display       : table-cell;
+    width         : 30%;
+    text-align    : center;
+    padding       : 4px 0;
+    border-right  : 1px solid #c9c8c8;
+    vertical-align: middle;
+}
+
+.first-cell {
+    text-align  : left;
+    padding-left: 10px;
+}
+
+.last-cell {
+    border-right: none;
+}
