@@ -103,6 +103,10 @@ const projects = [
         name: 'Table style - v2',
         link: './projects/ResponsiveTable/table-style-v2/index.html',
     },
+    {
+        name: 'Timeline - v1',
+        link: './projects/Timeline/timeline-v1/index.html',
+    },
 ]
 
 export default projects;
