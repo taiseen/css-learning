@@ -107,6 +107,10 @@ const projects = [
         name: 'Timeline - v1',
         link: './projects/Timeline/timeline-v1/index.html',
     },
+    {
+        name: 'Timeline - v2',
+        link: './projects/Timeline/timeline-v2/index.html',
+    },
 ]
 
 export default projects;

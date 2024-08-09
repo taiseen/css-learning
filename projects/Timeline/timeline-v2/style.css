@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 30 Dec 2021 */
+
+* {
+    margin            : 0;
+    padding           : 0;
+    border            : 0;
+    outline           : none;
+    list-style        : none;
+    text-decoration   : none;
+    scroll-behavior   : smooth;
+    box-sizing        : border-box;
+    font-family       : 'Nunito', sans-serif;
+    transition        : all .1s linear;
+    /* overflow       : hidden; */
+    /* user-select    : none; */
+}
+
+:root {
+    --dot      : #ddae2e;
+    --bg       : #222629;
+    --yearBox  : #3b4149;
+    --white    : #ffffff;
+    --off-white: #c8c8c8;
+}
+
+
+.timeline-section {
+    background-color: var(--bg);
+    min-height      : 100vh;
+    padding         : 100px 15px;
+}
+
+.timeline-items {
+    max-width: 1000px;
+    margin   : auto;
+    display  : flex;
+    flex-wrap: wrap;
+    position : relative;
+}
+
+/* SideBar Line  */
+.timeline-items::before {
+    content         : "";
+    position        : absolute;
+    width           : 2px;
+    height          : 100%;
+    background-color: var(--yearBox);
+    left            : calc(50% - 1px);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width        : 100%;
+    position     : relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align   : right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+
+.timeline-dot {
+    height          : 16px;
+    width           : 16px;
+    background-color: var(--dot);
+    border-radius   : 50%;
+    position        : absolute;
+    left            : calc(50% - 8px);
+    top             : 20px;
+}
+
+.timeline-date {
+    font-size: 2rem;
+    color    : var(--dot);
+    margin   : 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: var(--yearBox);
+    padding         : 30px;
+    border-radius   : 5 px;
+}
+
+.timeline-content h3 {
+    font-size     : 1.8rem;
+    color         : var(--white);
+    margin        : 0 0 10px;
+    text-transform: capitalize;
+}
+
+.timeline-content p {
+    color: var(--off-white);
+    font : 300 1.2rem/22px Nunito;
+}
+
+
+/* Responsive  */
+
+@media (max-width: 767px) {
+
+    .timeline-items::before {
+        left: 7px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align   : left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+
+    .timeline-dot {
+        left: 0;
+    }
+}
