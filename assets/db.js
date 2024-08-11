@@ -115,6 +115,10 @@ const projects = [
         name: 'Timeline - v3',
         link: './projects/Timeline/timeline-v3/index.html',
     },
+    {
+        name: 'Horizontal Navbar',
+        link: './projects/HorizontalNavbar/index.html',
+    },
 ]
 
 export default projects;

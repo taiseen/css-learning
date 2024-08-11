@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 1 Jan 2022 */
+
+* {
+    margin         : 0;
+    padding        : 0;
+    border         : 0;
+    outline        : none;
+    list-style     : none;
+    text-decoration: none;
+    text-transform : capitalize;
+    scroll-behavior: smooth;
+    box-sizing     : border-box;
+    font-family    : 'Nunito', sans-serif;
+    transition     : all .1s linear;
+    overflow       : hidden;
+    user-select    : none;
+}
+
+:root {
+    /* ====== Colors ====== */
+    --red-bg    : #e74c3c;
+    --green-bg  : #27ae60;
+    --blue-bg   : #2980b9;
+    --violate-bg: #8e44ad;
+    --orange-bg : #f39c12;
+}
+
+
+.header {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    height  : 70px;
+    z-index : 100;
+}
+
+.navBar {
+    display: flex;
+}
+
+.navBar a {
+    flex       : 1;
+    text-align : center;
+    line-height: 70px;
+    font-size  : 1.5rem;
+    color      : #fff;
+}
+
+.navBar a:hover {
+    filter: brightness(.9);
+}
+
+.navBar span {
+    margin-left: 10px;
+}
+
+
+.container {
+    display: flex;
+    width  : 500%;
+    height : 100vh;
+}
+
+.container .section {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 20%;
+    height         : 100%;
+    font-size      : 12vw;
+    letter-spacing : .4rem;
+    text-transform : uppercase;
+    font-weight    : bolder;
+}
+
+.navBar a:nth-child(1),
+.container .section:nth-child(1) {
+    background-color: var(--red-bg);
+}
+
+.navBar a:nth-child(2),
+.container .section:nth-child(2) {
+    background-color: var(--green-bg);
+}
+
+.navBar a:nth-child(3),
+.container .section:nth-child(3) {
+    background-color: var(--blue-bg);
+}
+
+.navBar a:nth-child(4),
+.container .section:nth-child(4) {
+    background-color: var(--violate-bg);
+}
+
+.navBar a:nth-child(5),
+.container .section:nth-child(5) {
+    background-color: var(--orange-bg);
+}
+
+
+/* Mobile Responsive  */
+@media screen and (max-width: 768px) {
+
+    .header {
+        top: 93vh;
+    }
+
+    .header .navBar a span {
+        display: none;
+    }
+}
