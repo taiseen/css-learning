@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Payment Gateway</title>
+    <!-- ############# 22 Dec 2021 ############# -->
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form action="">
+
+            <div class="row">
+
+                <!-- ######## column 1 ######## -->
+                <div class="col">
+                    <div class="title">billing address</div>
+
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" placeholder="Jon Doe">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" placeholder="test@example.com">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" placeholder="rood - street - locality">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" placeholder="mumbai">
+                    </div>
+
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>state :</span>
+                            <input type="text" placeholder="india">
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" placeholder="123 456">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ######## column 2 ######## -->
+                <div class="col">
+                    <div class="title">payment</div>
+
+                    <div class="inputBox">
+                        <span>card accepted :</span>
+                        <img src="./assets/img/card_img.png" alt="">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" placeholder="Jon Doe">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>credit card number:</span>
+                        <input type="number" placeholder="111-222-333-444">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="text" placeholder="may">
+                    </div>
+
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2022">
+                        </div>
+                        <div class="inputBox">
+                            <span>cvv :</span>
+                            <input type="text" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="button" value="process to checkout" class="submit-button">
+            
+        </form>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

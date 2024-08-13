@@ -119,6 +119,10 @@ const projects = [
         name: 'Horizontal Navbar',
         link: './projects/HorizontalNavbar/index.html',
     },
+    {
+        name: 'Payment Gateway Form',
+        link: './projects/PaymentGatewayForm/index.html',
+    },
 ]
 
 export default projects;
