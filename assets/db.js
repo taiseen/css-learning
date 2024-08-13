@@ -123,6 +123,10 @@ const projects = [
         name: 'Payment Gateway Form',
         link: './projects/PaymentGatewayForm/index.html',
     },
+    {
+        name: 'Services Section',
+        link: './projects/ServicesSection/index.html',
+    },
 ]
 
 export default projects;
