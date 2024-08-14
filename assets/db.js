@@ -127,6 +127,10 @@ const projects = [
         name: 'Services Section',
         link: './projects/ServicesSection/index.html',
     },
+    {
+        name: 'Layout Control: Stack - Grid',
+        link: './projects/LayoutControlStackGrid/index.html',
+    },
 ]
 
 export default projects;

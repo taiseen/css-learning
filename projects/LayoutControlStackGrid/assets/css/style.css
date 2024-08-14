@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 11 Jan 2022 */
+
+* {
+    margin               : 0;
+    padding              : 0;
+    border               : 0;
+    outline              : none;
+    list-style           : none;
+    text-decoration      : none;
+    scroll-behavior      : smooth;
+    box-sizing           : border-box;
+    font-family          : 'Nunito', sans-serif;
+    transition           : all .1s linear;
+}
+
+body {
+    background-color: #ddd;
+}
+
+.container {
+    min-height: 100vh;
+    width     : 100%;
+    max-width : 1200px;
+    margin    : 0 auto;
+}
+
+.layOutController {
+    display: none;
+}
+
+/* for simple menu */
+nav {
+    background-color: #333;
+}
+
+nav ul li a {
+    display         : block;
+    padding         : 1rem;
+    text-align      : center;
+    color           : #FFF;
+    background-color: #333;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+
+
+/* for nested menu */
+.social {
+    max-width: 110px;
+    margin   : 0 auto;
+}
+
+.social a {
+    text-indent: -10000px;
+}
+
+nav ul.social {
+    flex   : 1 1 0;
+    display: flex;
+}
+
+nav ul.social li {
+    flex: 1 1 0;
+}
+
+a.male {
+    background     : url(../img/user1.png) no-repeat center;
+    background-size: 100%;
+}
+
+a.female {
+    background     : url(../img/user2.png) no-repeat center;
+    background-size: 100%;
+}
+
+
+
+
+
+#blocks {
+    margin: 1rem;
+}
+
+article {
+    padding         : 1rem;
+    margin-bottom   : 20px;
+    border          : 1px solid #333;
+    background-color: #FFF;
+}
+
+article h2 {
+    text-align: center;
+    font-size : 1.5rem;
+    margin    : .8rem 0;
+}
+
+
+/*  
+    only when browser screen size going up-to 768px 
+    then apply these css rules...
+*/
+
+@media screen and (min-width: 768px) {
+
+
+    /* for simple menu */
+    nav ul {
+        display           : flex;
+        /* justify-content: space-evenly; */
+    }
+
+    nav ul li {
+        flex: 1 1 0;
+    }
+
+
+
+    /* for nested menu */
+    nav {
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    .social {
+        margin: 0;
+    }
+
+
+
+
+
+
+    .layOutController {
+        display    : block;
+        margin-top : 1rem;
+        margin-left: 1.2rem;
+    }
+
+    .layOutController a:hover {
+        text-decoration: underline;
+    }
+
+    #blocks {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: space-between;
+    }
+
+    article {
+        flex      : 0 1 32%;
+        transition: flex-basis .2s linear;
+    }
+
+    article.stack {
+        flex: 0 1 100%;
+    }
+}
