@@ -131,6 +131,10 @@ const projects = [
         name: 'Layout Control: Stack - Grid',
         link: './projects/LayoutControlStackGrid/index.html',
     },
+    {
+        name: 'Car Animation',
+        link: './projects/CarAnimation/index.html',
+    },
 ]
 
 export default projects;
