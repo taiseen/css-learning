@@ -135,6 +135,10 @@ const projects = [
         name: 'Car Animation',
         link: './projects/CarAnimation/index.html',
     },
+    {
+        name: 'DashBoard - v1',
+        link: './projects/LayoutSystem/dashboard/v1/index.html',
+    },
 ]
 
 export default projects;
