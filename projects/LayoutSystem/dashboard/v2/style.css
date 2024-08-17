@@ -1,0 +1,117 @@
+:root {
+    --headerHight      : 80px;
+    --sidebarWidth     : 200px;
+    /* ---------------------------------- */
+    --maniBg           : white;
+    --itemBg           : #dcdcdc;
+    --borderColor      : #464646;
+    --headerSidebarBg  : azure;
+    --headerSidebarText: #000;
+}
+
+
+body {
+    margin          : 0;
+    padding         : 0;
+    box-sizing      : border-box;
+    font-family     : Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+
+header {
+    position        : fixed;
+    top             : 0;
+    z-index         : 1000;
+    height          : var(--headerHight);
+    width           : 100%;
+    /* ---------------------------------- */
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    /* ---------------------------------- */
+    color           : var(--headerSidebarText);
+    background-color: var(--headerSidebarBg);
+    border-bottom   : 1px solid var(--borderColor);
+}
+
+
+header p {
+    width          : var(--sidebarWidth);
+    height         : inherit;
+    /* ---------------------------------- */
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    /* ---------------------------------- */
+    font-size      : 26px;
+    border-right   : 1px solid var(--borderColor);
+}
+
+
+header h1 {
+    padding-right: 10px;
+}
+
+
+aside {
+    position        : fixed;
+    top             : var(--headerHight);
+    left            : 0;
+    bottom          : 0;
+    width           : var(--sidebarWidth);
+    height          : 100%;
+    overflow-y      : auto;
+    /* ---------------------------------- */
+    color           : var(--headerSidebarText);
+    background-color: var(--headerSidebarBg);
+    border-right    : 1px solid var(--borderColor);
+}
+
+
+aside nav ul {
+    list-style    : none;
+    display       : flex;
+    flex-direction: column;
+    gap           : 20px;
+}
+
+
+aside nav ul li a {
+    color          : var(--headerSidebarText);
+    text-decoration: none;
+}
+
+
+main {
+    /* Width of the sidebar */
+    margin-left          : var(--sidebarWidth);
+    /* Height of the header */
+    margin-top           : var(--headerHight);
+    /* ---------------------------------- */
+    padding              : 20px;
+    background-color     : var(--maniBg);
+    /* ---------------------------------- */
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap                  : 18px;
+}
+
+
+.item {
+    height          : 200px;
+    background-color: var(--itemBg);
+    border-radius   : 5px;
+    cursor          : pointer;
+    transition      : 0.3s;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3.2rem;
+    box-shadow      : 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.item:hover {
+    background-color: #8a8a8a;
+}
