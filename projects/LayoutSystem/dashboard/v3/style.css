@@ -1,0 +1,132 @@
+:root {
+    --headerHeight     : 80px;
+    --sidebarWidth     : 200px;
+    /* ------------------------------- */
+    --mainBg           : white;
+    --itemBg           : #dcdcdc;
+    --borderColor      : #464646;
+    --headerSidebarBg  : azure;
+    --headerSidebarText: #000;
+}
+
+
+body {
+    margin        : 0;
+    padding       : 0;
+    box-sizing    : border-box;
+    font-family   : Arial, sans-serif;
+    display       : flex;
+    flex-direction: column;
+    height        : 100vh;
+}
+
+
+header {
+    position        : fixed;
+    top             : 0;
+    width           : 100%;
+    height          : var(--headerHeight);
+    z-index         : 1000;
+    /* ---------------------------------- */
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    /* ---------------------------------- */
+    color           : var(--headerSidebarText);
+    background-color: var(--headerSidebarBg);
+    border-bottom   : 1px solid var(--borderColor);
+}
+
+
+header .logoArea {
+    width          : var(--sidebarWidth);
+    height         : inherit;
+    /* ---------------------------------- */
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    /* ---------------------------------- */
+    font-size      : 26px;
+    border-right   : 1px solid var(--borderColor);
+}
+
+
+header .headerText {
+    padding-right: 10px;
+}
+
+
+main {
+    margin-top: var(--headerHeight);
+}
+
+
+.sideBar {
+    position        : fixed;
+    top             : var(--headerHeight);
+    left            : 0;
+    bottom          : 0;
+    width           : var(--sidebarWidth);
+    overflow-y      : auto;
+    /* ---------------------------------- */
+    color           : var(--headerSidebarText);
+    background-color: var(--headerSidebarBg);
+    border-right    : 1px solid var(--borderColor);
+}
+
+
+.sideBar nav ul {
+    list-style: none;
+    padding   : 20px;
+    margin    : 0;
+}
+
+
+.sideBar nav ul li a {
+    color           : var(--headerSidebarText);
+    text-decoration : none;
+    display         : block;
+    padding         : 10px;
+    border-radius   : 5px;
+    margin-bottom   : 10px;
+    background-color: var(--itemBg);
+    transition      : background-color 0.3s;
+}
+
+
+.sideBar nav ul li a:hover {
+    background-color: #8a8a8a;
+}
+
+
+.container {
+    flex                 : 1;
+    /* ---------------------------------- */
+    padding              : 20px;
+    background-color     : var(--mainBg);
+    overflow-y           : auto;
+    margin-left          : var(--sidebarWidth);
+    /* ---------------------------------- */
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap                  : 18px;
+}
+
+
+.item {
+    height          : 200px;
+    background-color: var(--itemBg);
+    border-radius   : 5px;
+    cursor          : pointer;
+    transition      : .3s;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 3.2rem;
+    box-shadow      : 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.item:hover {
+    background-color: #8a8a8a;
+}

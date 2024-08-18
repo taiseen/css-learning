@@ -143,6 +143,10 @@ const projects = [
         name: 'DashBoard - v2',
         link: './projects/LayoutSystem/dashboard/v2/index.html',
     },
+    {
+        name: 'DashBoard - v3',
+        link: './projects/LayoutSystem/dashboard/v3/index.html',
+    },
 ]
 
 export default projects;
