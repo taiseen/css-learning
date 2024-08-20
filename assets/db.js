@@ -151,6 +151,10 @@ const projects = [
         name: 'DashBoard - v4',
         link: './projects/LayoutSystem/dashboard/v4/index.html',
     },
+    {
+        name: 'Cookies Popup Box',
+        link: './projects/CookiesPopupBox/index.html',
+    },
 ]
 
 export default projects;
