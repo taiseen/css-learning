@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 22 Dec 2021 */
+
+* {
+    margin            : 0;
+    padding           : 0;
+    border            : 0;
+    outline           : none;
+    list-style        : none;
+    text-decoration   : none;
+    scroll-behavior   : smooth;
+    box-sizing        : border-box;
+    font-family       : 'Nunito', sans-serif;
+    transition        : all .1s linear;
+    /* overflow       : hidden; */
+    /* user-select    : none; */
+}
+
+body {
+    width     : 100%;
+    display   : flex;
+    position  : relative;
+    background: #E5E7EB;
+
+}
+
+#menu {
+    background: #111827;
+    width     : 300px;
+    min-height: 100vh;
+    position  : fixed;
+    top       : 0;
+    left      : 0;
+}
+
+#menu .logo {
+    display    : flex;
+    align-items: center;
+    padding    : 20px;
+    color      : #fff;
+    font-size  : 1.5rem;
+}
+
+#menu .logo img {
+    width       : 70px;
+    margin-right: 10px;
+}
+
+#menu .items li {
+    font-size  : 1.8rem;
+    padding    : 15px;
+    color      : rgb(134, 141, 151);
+    cursor     : pointer;
+    border-left: 4px solid transparent;
+}
+
+#menu .items li:nth-child(1) {
+    border-left: 4px solid #DDD;
+}
+
+#menu .items li i {
+    margin-right: 10px;
+    margin-left : 15px;
+}
+
+#menu .items li a {
+    color: rgb(134, 141, 151);
+}
+
+#menu .items li:hover {
+    background-color: rgba(218, 218, 218, 0.2);
+    border-left     : 4px solid #DDD;
+    transition      : .3s ease;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a {
+    color: #FFF;
+}
+
+#interface {
+    width      : calc(100% - 300px);
+    margin-left: 300px;
+    position   : relative;
+
+}
+
+#interface .navigation {
+    position        : fixed;
+    min-width       : calc(100% - 300px);
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    background-color: #fff;
+    padding         : 15px 30px;
+    border-bottom   : 3px solid #594ef7;
+}
+
+#interface .navigation .search {
+    display      : flex;
+    align-items  : center;
+    padding      : .8rem .9rem;
+    border       : 1px solid #333;
+    border-radius: 5px;
+}
+
+#interface .navigation .search input {
+    font-size  : 1.3rem;
+    margin-left: 1rem;
+}
+
+#interface .navigation .profile {
+    display    : flex;
+    align-items: center;
+    cursor     : pointer;
+}
+
+#interface .navigation .profile i {
+    font-size  : 19px;
+    font-weight: 400;
+}
+
+#interface .navigation .profile img {
+    width      : 50px;
+    margin-left: 20px;
+}
+
+.n1 {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+#menuBar {
+    color       : #2b2b2b;
+    font-size   : 20px;
+    cursor      : pointer;
+    margin-right: 20px;
+    display     : none;
+}
+
+
+.i-name {
+    color      : #444a53;
+    padding    : 30px 30px 0 30px;
+    font-size  : 2rem;
+    font-weight: 700;
+    margin-top : 70px;
+}
+
+.values {
+    padding        : 30px 30px 0 30px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    flex-wrap      : wrap;
+    gap            : 20px;
+}
+
+.val-box {
+    flex               : 1 1 275px;
+    padding            : 16px 20px;
+    /* margin-bottom   : 10px; */
+    background-color   : #FFF;
+    border-radius      : 5px;
+    display            : flex;
+    align-items        : center;
+}
+
+.val-box i {
+    font-size    : 1.8rem;
+    width        : 60px;
+    height       : 60px;
+    border-radius: 50%;
+    line-height  : 60px;
+    text-align   : center;
+    color        : #FFF;
+    margin-right : 15px;
+}
+
+.val-box:nth-child(1) i {
+    background-color: #7b74ec;
+}
+
+.val-box:nth-child(2) i {
+    background-color: #5c8af0;
+}
+
+.val-box:nth-child(3) i {
+    background-color: #e45d99;
+}
+
+.val-box:nth-child(4) i {
+    background-color: #74daac;
+}
+
+.val-box h3 {
+    font-size  : 18px;
+    font-weight: 800;
+}
+
+.val-box span {
+    color: #828997;
+}
+
+.board {
+    width              : 96%;
+    /* margin          : 30px 0 30px 30px; */
+    margin             : 30px auto;
+    overflow           : auto;
+    background-color   : #fff;
+    border-radius      : 8px;
+}
+
+.board .people {
+    display    : flex;
+    align-items: center;
+    padding    : 10px;
+}
+
+.board h5 {
+    font: 700 1.3rem;
+
+}
+
+.board p {
+    font-weight: 400;
+    color      : #787d8d;
+}
+
+.board .people img {
+    width       : 45px;
+    height      : 45px;
+    object-fit  : cover;
+    margin-right: 10px;
+
+}
+
+table {
+    width          : 100%;
+    border-collapse: collapse;
+}
+
+table thead tr th {
+    text-align      : start;
+    padding         : 10px 0 10px 10px;
+    background-color: #f9fafb;
+    font-size       : 1.5rem;
+    text-transform  : uppercase;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid #eef0f3;
+}
+
+tbody tr td {
+    padding: 10px;
+}
+
+.active p {
+    display         : inline-block;
+    background-color: lightgreen;
+    padding         : 4px 12px;
+    border-radius   : 40px;
+    color           : #2f2f2f;
+}
+
+.edit a {
+    font-size  : 1.3rem;
+    font-weight: 500;
+    color      : #554cd1;
+}
+
+
+
+/* Mobile Site */
+
+@media screen and (max-width: 768px) {
+
+    #menu {
+        width     : 270px;
+        left      : -270px;
+        transition: .3s ease;
+    }
+
+    #menu.active {
+        left: 0px;
+    }
+
+    #menuBar {
+        display: initial;
+    }
+
+    #interface {
+        width      : 100%;
+        margin-left: 0;
+        display    : inline-block;
+        transition : .3s ease;
+    }
+
+    #menu.active~#interface {
+        width      : calc(100% - 270px);
+        margin-left: 270px;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .val-box {
+        flex: 1 1 180px;
+    }
+
+    .board {
+        width     : 92%;
+        padding   : 0;
+        overflow-x: auto;
+    }
+
+    .search input {
+        width: 150px;
+    }
+
+    table {
+        width          : 100%;
+        border-collapse: collapse;
+    }
+
+}
