@@ -155,6 +155,10 @@ const projects = [
         name: 'Cookies Popup Box',
         link: './projects/CookiesPopupBox/index.html',
     },
+    {
+        name: 'Custom Select Box',
+        link: './projects/CustomSelectBox/index.html',
+    },
 ]
 
 export default projects;

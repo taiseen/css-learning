@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 26 Dec 2021 */
+
+* {
+    margin            : 0;
+    padding           : 0;
+    border            : 0;
+    outline           : none;
+    list-style        : none;
+    text-decoration   : none;
+    scroll-behavior   : smooth;
+    box-sizing        : border-box;
+    font-family       : 'Nunito', sans-serif;
+    transition        : all .1s linear;
+    /* overflow       : hidden; */
+    /* user-select    : none; */
+}
+
+:root {
+    --color1: #F44336;
+    --color2: #730228;
+}
+
+.container {
+    width           : 100%;
+    height          : 100vh;
+    background-image: linear-gradient(var(--color1), var(--color2));
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+.selector {
+    width: 400px;
+}
+
+#selectField {
+    width           : 100%;
+    padding         : 15px 20px;
+    margin-bottom   : 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius   : 5px;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    cursor          : pointer;
+    font-size       : 1.5rem
+}
+
+#selectField img {
+    width     : 20px;
+    height    : 20px;
+    transition: transform .5s;
+}
+
+#selected {
+    position   : relative;
+    display    : flex;
+    align-items: center;
+}
+
+#selected img {
+    position: absolute;
+    top     : -2px;
+    left    : -5px;
+    width   : 35px;
+    height  : 35px;
+}
+
+#selected p {
+    padding-left: 20px;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+#list {
+    width           : 100%;
+    overflow        : hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius   : 5px;
+    cursor          : pointer;
+}
+
+.option {
+    position     : relative;
+    padding      : 15px 5px;
+    margin       : 10px 5px;
+    border-radius: 5px;
+
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.option img {
+    position: absolute;
+    top     : 10px;
+    left    : 10px;
+    width   : 35px;
+}
+
+.option p {
+    padding-left: 50px;
+    font-size   : 1.3rem;
+}
+
+.hide {
+    visibility: hidden;
+}
