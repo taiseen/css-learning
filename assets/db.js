@@ -159,6 +159,10 @@ const projects = [
         name: 'Custom Select Box',
         link: './projects/CustomSelectBox/index.html',
     },
+    {
+        name: 'Theme Color Switcher',
+        link: './projects/ThemeColorSwitcher/index.html',
+    },
 ]
 
 export default projects;

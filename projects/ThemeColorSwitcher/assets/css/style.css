@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* 30 - Jan - 2022  */
+:root {
+  --mainColor: #8E44AD;
+  --white    : #FFF;
+}
+
+* {
+  margin            : 0;
+  padding           : 0;
+  border            : 0;
+  outline           : none;
+  list-style        : none;
+  text-decoration   : none;
+  text-transform    : capitalize;
+  scroll-behavior   : smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing        : border-box;
+  font-family       : 'Nunito', sans-serif;
+  -webkit-transition: all .1s linear;
+  transition        : all .1s linear;
+  /* user-select    : none; */
+}
+
+.container {
+  min-height      : 100vh;
+  background-color: var(--mainColor);
+  display         : -ms-grid;
+  display         : grid;
+  place-items     : center;
+  padding-bottom  : 80px;
+}
+
+.container h1 {
+  color             : var(--mainColor);
+  background-color  : var(--white);
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  box-shadow        : 0 10px 15px rgba(0, 0, 0, 0.3);
+  border-radius     : 10px;
+  font-size         : 6rem;
+  padding           : 1rem 2rem;
+}
+
+.colorSwitcher {
+  position          : fixed;
+  top               : 25px;
+  right             : -200px;
+  width             : 200px;
+  padding           : .6rem;
+  z-index           : 10000;
+  background        : var(--white);
+  -webkit-transition: right .3s ease;
+  transition        : right .3s ease;
+}
+
+.colorSwitcher.userClick {
+  right: 0;
+}
+
+.colorSwitcher .switchBtn {
+  position                 : absolute;
+  top                      : 0;
+  left                     : -75px;
+  color                    : var(--mainColor);
+  background               : var(--white);
+  padding                  : 10px 20px;
+  font-size                : 35px;
+  cursor                   : pointer;
+  border-top-left-radius   : 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.colorSwitcher .switchBtn:hover {
+  background: #eee;
+}
+
+.colorSwitcher .switchBtn i {
+  -webkit-animation: rotate 2s linear infinite;
+  animation        : rotate 2s linear infinite;
+}
+
+.colorSwitcher h3 {
+  color        : var(--mainColor);
+  font-size    : 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding      : 5px 0;
+  text-align   : center;
+}
+
+.colorSwitcher .themeBtnContainer {
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  -ms-flex-wrap   : wrap;
+  flex-wrap       : wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack   : center;
+  justify-content : center;
+}
+
+.colorSwitcher .themeBtnContainer .themeBtn {
+  display      : block;
+  width        : 50px;
+  height       : 50px;
+  border-radius: 50%;
+  cursor       : pointer;
+  margin       : 5px;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
