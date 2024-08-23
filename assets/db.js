@@ -163,6 +163,10 @@ const projects = [
         name: 'Theme Color Switcher',
         link: './projects/ThemeColorSwitcher/index.html',
     },
+    {
+        name: 'Grid Hero Section',
+        link: './projects/GridHeroSection/index.html',
+    },
 ]
 
 export default projects;
