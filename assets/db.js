@@ -167,6 +167,10 @@ const projects = [
         name: 'Grid Hero Section',
         link: './projects/GridHeroSection/index.html',
     },
+    {
+        name: 'FAQ Accordion',
+        link: './projects/FaqAccordion/index.html',
+    },
 ]
 
 export default projects;
