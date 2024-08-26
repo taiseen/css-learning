@@ -2,10 +2,12 @@ import projects from './db.js';
 
 
 const container = document.getElementById('container');
+const totalProject = document.getElementById('totalProject');
 
 
 const gitUrl = 'https://taiseen.github.io/learning-css-js/';
 
+totalProject.innerText = projects.length;
 
 // Loop through each project and create an anchor element
 projects.forEach(project => {
