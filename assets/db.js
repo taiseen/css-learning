@@ -171,6 +171,10 @@ const projects = [
         name: 'FAQ Accordion',
         link: './projects/FaqAccordion/index.html',
     },
+    {
+        name: 'Theme Toggler',
+        link: './projects/ThemeToggler/index.html',
+    },
 ]
 
 export default projects;
