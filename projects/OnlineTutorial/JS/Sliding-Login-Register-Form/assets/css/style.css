@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* 25 Dec 2021 */
+
+* {
+    margin            : 0;
+    padding           : 0;
+    border            : 0;
+    outline           : none;
+    list-style        : none;
+    text-decoration   : none;
+    scroll-behavior   : smooth;
+    box-sizing        : border-box;
+    font-family       : 'Nunito', sans-serif;
+    transition        : all .1s linear;
+    /* overflow       : hidden; */
+}
+
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    min-height      : 100vh;
+    background-color: #03a9f4;
+    transition      : .5s;
+}
+
+body.active {
+    background-color: #f43648;
+}
+
+.container {
+    position           : relative;
+    width              : 800px;
+    height             : 500px;
+    margin             : 20px;
+    /* background-color: #ff0; */
+}
+
+.blueBg {
+    position       : absolute;
+    top            : 40px;
+    width          : 100%;
+    height         : 420px;
+    background     : rgba(255, 255, 255, 0.2);
+    box-shadow     : 0 5px 45px rgba(0, 0, 0, 0.15);
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.blueBg .box {
+    position       : relative;
+    width          : 50%;
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.blueBg .box h2 {
+    color        : #fff;
+    font-size    : 1.2em;
+    font-weight  : 500;
+    margin-bottom: 10px;
+}
+
+.blueBg .box button {
+    cursor          : pointer;
+    padding         : 10px 20px;
+    background-color: #fff;
+    color           : #000;
+    font-size       : 16px;
+    font-weight     : 500;
+    box-shadow      : 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blueBg .box button:active {
+    box-shadow: none;
+    transform : scale(.90);
+}
+
+
+
+
+.formBox {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 50%;
+    height          : 100%;
+    z-index         : 1000;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: #fff;
+    box-shadow      : 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition      : left .5s ease-in-out;
+    overflow        : hidden;
+}
+
+.formBox.active {
+    left: 50%;
+}
+
+.formBox .form {
+    position  : absolute;
+    left      : 0;
+    width     : 100%;
+    padding   : 50px;
+    transition: .5s;
+}
+
+.formBox .signInForm {
+    transition-delay: .25s;
+}
+
+.formBox.active .signInForm {
+    left            : -100%;
+    transition-delay: 0s;
+}
+
+/* ################################### */
+/* this css rule position is important */
+/* ################################### */
+.formBox .signUpForm {
+    left            : 100%;
+    transition-delay: .0s;
+}
+
+.formBox.active .signUpForm {
+    left            : 0;
+    transition-delay: .25s;
+}
+
+/* ################################### */
+/* this css rule position is important */
+/* ################################### */
+
+
+.formBox .form form {
+    width         : 100%;
+    display       : flex;
+    flex-direction: column;
+}
+
+.formBox .form form h3 {
+    font-size    : 1.5em;
+    color        : #333;
+    margin-bottom: 20px;
+    font-weight  : 500;
+}
+
+.formBox .form form input {
+    width        : 100%;
+    margin-bottom: 20px;
+    padding      : 10px;
+    border       : 1px solid #333;
+    font-size    : 1rem;
+}
+
+.formBox .form form input[type="submit"] {
+    background-color: #03a9f4;
+    border          : none;
+    color           : #fff;
+    max-width       : 100px;
+    cursor          : pointer;
+    box-shadow      : 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.formBox .form form input[type="submit"]:active {
+    transform : scale(.95);
+    box-shadow: none;
+}
+
+
+.formBox.active .form form input[type="submit"] {
+    background-color: #f43648;
+}
+
+
+.formBox .form form .forget {
+    color: #333;
+}
+
+.formBox .form form .forget:hover {
+    color: tomato;
+}
+
+
+
+/* Responsiveness  */
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width      : 400px;
+        height         : 650px;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .container .blueBg {
+        top   : 0;
+        height: 100%;
+    }
+
+    .formBox {
+        width     : 100%;
+        height    : 500px;
+        top       : 0;
+        box-shadow: none;
+    }
+
+    .blueBg .box {
+        position: absolute;
+        width   : 100%;
+        height  : 150px;
+        bottom  : 0;
+    }
+
+    .box.signIn {
+        top: 0;
+    }
+
+    .formBox.active {
+        left: 0;
+        top : 150px;
+    }
+}

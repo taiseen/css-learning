@@ -32,6 +32,10 @@ const projects = [
         link: './projects/OnlineTutorial/JS/Range-Slider-Custom-Animated/index.html',
     },
     {
+        name: 'Sliding-Login-Register-Form',
+        link: './projects/OnlineTutorial/JS/Sliding-Login-Register-Form/index.html',
+    },
+    {
         name: 'SpinWheel Canvas',
         link: './projects/SpinWheel/codecc/index.html',
     },
