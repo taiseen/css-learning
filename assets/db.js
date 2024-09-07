@@ -183,6 +183,10 @@ const projects = [
         name: 'Tik Tok Toe',
         link: './projects/TikTokToe/index.html',
     },
+    {
+        name: 'Click To Copy Coupon Code',
+        link: './projects/CopyCouponCode/index.html',
+    },
 ]
 
 export default projects;
