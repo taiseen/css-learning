@@ -179,6 +179,10 @@ const projects = [
         name: 'Theme Toggler',
         link: './projects/ThemeToggler/index.html',
     },
+    {
+        name: 'Tik Tok Toe',
+        link: './projects/TikTokToe/index.html',
+    },
 ]
 
 export default projects;
