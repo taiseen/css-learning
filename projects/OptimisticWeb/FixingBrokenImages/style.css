@@ -1,0 +1,134 @@
+/* 08-Sep-2024 */
+
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --topBorderColor: #15dc29;
+    --gridLineColor : #dddddd;
+    --elementColor  : #ff6200;
+    --textColor     : #101010;
+    --bgColor       : #c4e5d1;
+}
+
+
+body {
+
+    font-family          : system-ui, sans-serif;
+    font-size            : 1.0625rem;
+    line-height          : 1.8;
+    padding              : 3rem 5rem;
+    color                : var(--textColor);
+    border-block-start   : 6px solid var(--topBorderColor);
+    background-attachment: fixed;
+    background-image     :
+        linear-gradient(transparent, var(--bgColor) 70%),
+
+        repeating-linear-gradient(var(--gridLineColor),
+            var(--gridLineColor) 1px,
+            transparent 1px,
+            transparent 40px),
+
+        repeating-linear-gradient(to right,
+            var(--gridLineColor),
+            var(--gridLineColor) 1px,
+            transparent 1px,
+            transparent 40px);
+}
+
+
+main {
+    max-width    : 800px;
+    margin-inline: auto;
+}
+
+
+h1 {
+    font-size  : 2rem;
+    line-height: 1.5;
+}
+
+
+h2 {
+    font-size       : 1.25rem;
+    line-height     : 1.5;
+    margin-block-end: 1.5em;
+}
+
+
+.post {
+    margin-block-end: 2em;
+}
+
+
+.post-title {
+    font-size       : 1.5rem;
+    line-height     : 1.5;
+    margin-block-end: 0.5em;
+}
+
+
+.post-img {
+    position    : relative;
+    display     : block;
+    font-size   : 1em;
+    margin-block: 0.5em 1em;
+    max-width   : 100%;
+    aspect-ratio: 16 / 9;
+    object-fit  : cover;
+}
+
+
+.post-img::before {
+    position        : absolute;
+    content         : attr(alt) " not found";
+    inset           : 0;
+    padding         : 1em 2em;
+    text-align      : center;
+    color           : var(--elementColor);
+    background-color: #fff;
+    border          : 2px dashed var(--elementColor);
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+
+.post-link {
+    color          : var(--elementColor);
+    font-size      : 0.85em;
+    font-weight    : bold;
+    text-decoration: none;
+    transition     : color 0.3s ease-in-out;
+}
+
+
+.post-link:hover,
+.post-link:focus-visible {
+    color: var(--textColor);
+}
+
+
+.post-link:focus-visible {
+    outline       : 1px dashed;
+    outline-offset: 3px;
+}
+
+
+@media (min-width: 600px) {
+    .post-summary {
+        display    : flex;
+        align-items: flex-start;
+        gap        : 1.5em;
+    }
+
+    .post-img {
+        flex        : 0 0 200px;
+        margin-block: 0.5em 0;
+        max-width   : 200px;
+        aspect-ratio: 1;
+    }
+}

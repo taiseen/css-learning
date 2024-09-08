@@ -187,6 +187,10 @@ const projects = [
         name: 'Click To Copy Coupon Code',
         link: './projects/CopyCouponCode/index.html',
     },
+    {
+        name: 'Fixing Broken Images',
+        link: './projects/OptimisticWeb/FixingBrokenImages/index.html',
+    },
 ]
 
 export default projects;

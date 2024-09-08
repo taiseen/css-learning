@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Fixing Broken Images</title>
+
+    <script>
+      function fixBrokenImages(el) {
+        const imgUrl = "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg";
+
+        el.onerror = null;
+        el.src = imgUrl;
+        el.alt = "Post thumbnail not found";
+        el.classList.add("broken-img");
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <!-- 08-Sep-2024 -->
+
+    <main>
+      <h1>Style Broken Images</h1>
+      <h2>The ultimate guide to fixing broken images</h2>
+
+      <article class="post">
+        <h3 class="post-title">CSS Logical Properties</h3>
+
+        <div class="post-summary">
+          <!-- <img
+            class="post-img"
+            alt="Post thumbnail for CSS Logical Properties"
+            src="no-img-found.png"
+            onerror="this.style.display='none'"
+          /> -->
+
+          <!-- src="https://images.unsplash.com/photo-1683515424285-f52d31451b73" -->
+
+          <img
+            class="post-img"
+            alt="Post thumbnail for CSS Logical Properties"
+            src="noImgFound"
+          />
+
+          <p>
+            Logical properties in CSS provide a smart way for web developers to
+            create flexible and maintainable layouts that accommodate various
+            languages and writing directions. In this video, we'll explore a
+            real-life example to understand the fundamental concept behind CSS
+            logical properties ... <br />
+
+            <a
+              title="Watch the video"
+              class="post-link"
+              href="https://youtu.be/yZ-ue17LNpY"
+            >
+              Watch the video »
+            </a>
+          </p>
+        </div>
+      </article>
+
+      <article class="post">
+        <h3 class="post-title">:has() Pseudo-Class Selector</h3>
+
+        <div class="post-summary">
+          <img
+            src="no-image.png"
+            class="post-img"
+            alt="Post thumbnail for :has() Pseudo-Class Selector"
+            onerror="fixBrokenImages(this)"
+          />
+          <p>
+            The :has() pseudo-class selector gives us the ability to style
+            elements based on the presence or properties of their children. It
+            offers detailed control over how we style and interact with our web
+            page elements ... <br />
+            <a
+              class="post-link"
+              title="Watch the video"
+              href="https://youtu.be/87C9RnH-mY0"
+            >
+              Watch the video »
+            </a>
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
