@@ -191,6 +191,10 @@ const projects = [
         name: 'Fixing Broken Images',
         link: './projects/OptimisticWeb/FixingBrokenImages/index.html',
     },
+    {
+        name: 'Tabs Animation',
+        link: './projects/OptimisticWeb/TabsAnimation/index.html',
+    },
 ]
 
 export default projects;
