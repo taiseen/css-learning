@@ -195,6 +195,10 @@ const projects = [
         name: 'Tabs Animation',
         link: './projects/OptimisticWeb/TabsAnimation/index.html',
     },
+    {
+        name: 'Circular Animation',
+        link: './projects/OptimisticWeb/CircularAnimation/index.html',
+    },    
 ]
 
 export default projects;

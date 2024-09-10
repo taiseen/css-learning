@@ -1,0 +1,119 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --topBorder: #f1d23a;
+    --bgAndBlur: #070707;
+    --gridColor: #212121;
+    --circleC1 : #00dbde;
+    --circleC2 : #fc00ff;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size  : 1rem;
+    line-height: 1.8;
+    color      : #fff;
+    background :
+
+        /* responsible for top bar creation */
+        fixed linear-gradient(var(--topBorder),
+            var(--topBorder) 6px,
+            transparent 6px,
+            transparent),
+
+        /* responsible for bottom blur effect */
+        fixed linear-gradient(transparent, var(--bgAndBlur) 70%),
+
+        /* responsible for row creation */
+        fixed repeating-linear-gradient(
+            var(--gridColor),
+            var(--gridColor) 1px,
+            transparent 1px,
+            transparent 40px
+        ),
+
+        /* responsible for column creation */
+        fixed repeating-linear-gradient(
+            to right,
+            var(--gridColor),
+            var(--gridColor) 1px,
+            transparent 1px,
+            transparent 40px) var(--bgAndBlur);
+
+    padding    : 3rem 5rem;
+    min-height : 100vh;
+    display    : flex;
+    flex-flow  : column;
+    align-items: center;
+    gap        : 6rem;
+}
+
+
+h1 {
+    font-size  : 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align : center;
+}
+
+
+.circle {
+    position      : relative;
+    width         : 160px;
+    aspect-ratio  : 1;
+    border-radius : 50%;
+    outline       : 30px solid rgba(0, 0, 0, 0.35);
+    outline-offset: -12px;
+}
+
+
+.circle img {
+    display        : block;
+    width          : 100%;
+    aspect-ratio   : 1;
+    object-fit     : cover;
+    object-position: top;
+    border-radius  : inherit;
+}
+
+
+.circle::before,
+.circle::after {
+    position        : absolute;
+    z-index         : -1;
+    content         : "";
+    inset           : -40px;
+    border-radius   : inherit;
+    background-image: conic-gradient(var(--circleC1), var(--circleC2), var(--circleC1));
+    animation       : rotationEffects 3s linear infinite;
+}
+
+.circle:hover::before,
+.circle:hover::after {
+    animation-play-state: paused;
+}
+
+
+.circle::after {
+    filter : blur(2rem);
+    opacity: 0.7;
+}
+
+
+@keyframes rotationEffects {
+    /* from {
+        rotate: 0deg;
+    } */
+
+    to {
+        rotate: 360deg;
+    }
+}
