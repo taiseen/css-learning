@@ -1,44 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
     text-decoration: none;
-    outline: none;
+    outline        : none;
 }
 
+
 body {
-    padding: 12px;
-    font-family: "Nunito", sans-serif;
+    padding            : 12px;
+    font-family        : "Nunito", sans-serif;
     font-optical-sizing: auto;
 }
 
+
 h1 {
-    text-align: center;
+    text-align   : center;
     margin-bottom: 12px;
 }
 
+
 #container {
-    padding: 18px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
+    padding         : 18px;
+    display         : flex;
+    flex-wrap       : wrap;
+    align-items     : center;
+    gap             : 20px;
     background-color: rgb(235, 235, 235);
-    border-radius: 4px;
+    border-radius   : 4px;
 }
 
+
 #container a {
-    text-align: center;
-    flex-grow: 1;
-    padding: 18px;
+    position     : relative;
+    text-align   : center;
+    flex-grow    : 1;
+    padding      : 18px;
     border-radius: 4px;
-    border: 1px rgb(5, 86, 179) dashed;
-    transition: .4s ease;
-    font-size: 24px;
+    border       : 1px rgb(5, 86, 179) dashed;
+    transition   : .4s ease;
+    font-size    : 24px;
 }
+
 
 #container a:hover {
     background-color: aquamarine;
+}
+
+
+
+#container a span {
+    position                  : absolute;
+    left                      : 0px;
+    top                       : 0px;
+    width                     : 22px;
+    height                    : 20px;
+    display                   : grid;
+    place-items               : center;
+    font-size                 : 12px;
+    line-height               : 20px;
+    font-weight               : bold;
+    color                     : rgb(17, 137, 17);
+    border-bottom             : 1px rgb(5, 86, 179) dashed;
+    border-right              : 1px rgb(5, 86, 179) dashed;
+    border-bottom-right-radius: 4px;
+    transition                : .2s ease;
+}
+
+
+#container a:hover span {
+    color: rgb(176, 6, 6)
 }

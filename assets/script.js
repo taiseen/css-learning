@@ -7,14 +7,16 @@ const totalProject = document.getElementById('totalProject');
 
 const gitUrl = 'https://taiseen.github.io/learning-css-js/';
 
+
 totalProject.innerText = projects.length;
 
-// Loop through each project and create an anchor element
-projects.forEach(project => {
 
+// Loop through each project and create an anchor element
+projects.forEach((project, idx) => {
 
     // Create the anchor element
     const anchor = document.createElement('a');
+    const span = document.createElement('span');
 
 
     // 🔶 Set the required attributes || for local live Link
@@ -32,6 +34,9 @@ projects.forEach(project => {
     // Set the inner text of the anchor
     anchor.textContent = project.name;
 
+    span.textContent = idx + 1;
+
+    anchor.appendChild(span);
 
     // Append the anchor to the container
     container.appendChild(anchor);
