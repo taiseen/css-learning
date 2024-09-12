@@ -1,0 +1,110 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color1 : #ffef7e;
+    --color2 : #f9b7b7;
+    --bgColor: #edf1f4;
+    --bgImage: linear-gradient(to right, var(--color1), var(--color2));
+    --border : 1px dotted;
+}
+
+
+body {
+    font-family       : system-ui, sans-serif;
+    font-size         : 1.0625rem;
+    line-height       : 1.8;
+    color             : #101010;
+    background-color  : var(--bgColor);
+    border-block-start: 10px solid var(--color2);
+    padding           : 3rem 5rem 1rem;
+}
+
+
+p {
+    margin-block: 1.25rem;
+}
+
+
+main {
+    max-width    : 500px;
+    margin-inline: auto;
+}
+
+
+header {
+    max-width       : 70%;
+    margin-block-end: 1rem;
+}
+
+
+h1 {
+    font-size                   : 4rem;
+    line-height                 : 0.75;
+    font-weight                 : 800;
+    display                     : inline;
+    padding                     : 0 0.0625em;
+    background-image            : var(--bgImage);
+    background-size             : 100% 30%;
+    background-repeat           : no-repeat;
+    background-position         : 0 90%;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break        : clone;
+    /* ⬆️ divide into separate fragment */
+}
+
+
+h2 {
+    font-size                   : 2rem;
+    line-height                 : 2.10;
+    font-weight                 : 700;
+    text-transform              : uppercase;
+    display                     : inline;
+    padding                     : 0.25em 0.5em;
+    border                      : var(--border);
+    background-image            : var(--bgImage);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break        : clone;
+    /* ⬆️ divide into separate fragment */
+}
+
+
+/* 
+    apply to all span tag...
+    but where .animate class present don't apply there... 
+*/
+p:not(.animate) span {
+    padding                     : 0.125em 0.25em;
+    background                  : var(--bgImage);
+    border                      : var(--border);
+    border-radius               : 0.25em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break        : clone;
+    /* ⬆️ divide into separate fragment */
+}
+
+
+p.animate span {
+    padding                     : 0.125em 0;
+    background                  : var(--bgImage);
+    border                      : var(--border) transparent;
+    border-radius               : 0.25em;
+    background-size             : 0% 100%;
+    background-repeat           : no-repeat;
+    transition                  : border 750ms ease-in-out, 
+                                  background 750ms ease-in-out;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break        : clone;
+    /* ⬆️ each fragment has its own animation */
+}
+
+
+.animate:hover span {
+    /* reset the background */
+    background-size: 100% 100%;
+    border         : var(--border);
+}

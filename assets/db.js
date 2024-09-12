@@ -74,7 +74,7 @@ const projects = [
     {
         name: 'Layout-3',
         link: './projects/LayoutSystem/Flex/layout-3/index.html',
-    }, 
+    },
     {
         name: 'Animate On Scroll',
         link: './projects/SnippetsCode/AnimateOnScroll/index.html',
@@ -198,7 +198,11 @@ const projects = [
     {
         name: 'Circular Animation',
         link: './projects/OptimisticWeb/CircularAnimation/index.html',
-    },    
+    },
+    {
+        name: 'Box Decorations',
+        link: './projects/OptimisticWeb/BoxDecorations/index.html',
+    },
 ]
 
 export default projects;
