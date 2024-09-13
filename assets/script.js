@@ -14,30 +14,50 @@ totalProject.innerText = projects.length;
 // Loop through each project and create an anchor element
 projects.forEach((project, idx) => {
 
-    // Create the anchor element
-    const anchor = document.createElement('a');
-    const span = document.createElement('span');
+    // Create element
+    const projectBox = document.createElement('div');
+    const spanContext = document.createElement('span');
+    const spanNumber = document.createElement('span');
+    const anchorLink = document.createElement('a');
 
 
-    // 🔶 Set the required attributes || for local live Link
-    // anchor.setAttribute('href', project.link);
+    // Assign different class names...
+    projectBox.className = 'projectBox';
+    spanNumber.className = 'projectNumber';
+    spanContext.className = 'projectContext';
+    anchorLink.className = 'anchorLink';
+
+    
+
+    // Assign values
+    spanNumber.textContent = idx + 1;
+    spanContext.textContent = project.context;
 
 
-    // 🔶 Set the required attributes || for gitHub live Link
-    anchor.setAttribute('href', `${gitUrl}${project.link}`);
+    // anchor.setAttribute('href', project.link); // 🔴🔴🔴 for local live link
+    anchorLink.setAttribute('href', `${gitUrl}${project.link}`); // 🔴🔴🔴 for gitHub live link
+    anchorLink.setAttribute('rel', 'noopener noreferrer');
+    anchorLink.setAttribute('target', '_blank');
+    anchorLink.textContent = project.name; // Set the inner text of the anchor
 
 
-    // anchor.setAttribute('rel', 'noopener noreferrer');
-    anchor.setAttribute('target', '_blank');
+    // Append elements
+    projectBox.appendChild(spanContext);
+    projectBox.appendChild(spanNumber);
+    projectBox.appendChild(anchorLink);
 
 
-    // Set the inner text of the anchor
-    anchor.textContent = project.name;
+    // Append projectBox to the container
+    container.appendChild(projectBox);
 
-    span.textContent = idx + 1;
-
-    anchor.appendChild(span);
-
-    // Append the anchor to the container
-    container.appendChild(anchor);
 });
+
+
+
+{/* 
+    <div class="projectBox">
+        <span class="projectNumber"> 1 </span>
+        <span class="projectContext"> Css + Js </span>
+        <a class="anchorLink" href="#"> DEMO </a>
+    </div> 
+*/}

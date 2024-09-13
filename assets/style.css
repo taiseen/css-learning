@@ -10,10 +10,32 @@
 }
 
 
+:root {
+    --topBorderColor: #14bc25;
+    --gridLineColor : #dddddd;
+    --bgColor       : #c4e5d1;
+    --radius        : 6px;
+    --borderStyle   : 1px #0556b3 dashed;
+}
+
+
 body {
-    padding            : 12px;
-    font-family        : "Nunito", sans-serif;
-    font-optical-sizing: auto;
+    padding              : 1rem;
+    font-family          : "Nunito", sans-serif;
+    font-optical-sizing  : auto;
+    border-block-start   : 6px solid var(--topBorderColor);
+    background-attachment: fixed;
+    background-image     :
+        linear-gradient(transparent, var(--bgColor) 70%),
+        repeating-linear-gradient(var(--gridLineColor),
+            var(--gridLineColor) 1px,
+            transparent 1px,
+            transparent 40px),
+        repeating-linear-gradient(to right,
+            var(--gridLineColor),
+            var(--gridLineColor) 1px,
+            transparent 1px,
+            transparent 40px);
 }
 
 
@@ -24,53 +46,73 @@ h1 {
 
 
 #container {
-    padding         : 18px;
-    display         : flex;
-    flex-wrap       : wrap;
-    align-items     : center;
-    gap             : 20px;
-    background-color: rgb(235, 235, 235);
-    border-radius   : 4px;
+    padding    : 1rem;
+    display    : flex;
+    flex-wrap  : wrap;
+    align-items: center;
+    gap        : 20px;
 }
 
 
-#container a {
-    position     : relative;
-    text-align   : center;
-    flex-grow    : 1;
-    padding      : 18px;
-    border-radius: 4px;
-    border       : 1px rgb(5, 86, 179) dashed;
-    transition   : .4s ease;
-    font-size    : 24px;
+#container .projectBox {
+    position        : relative;
+    text-align      : center;
+    flex-grow       : 1;
+    font-size       : 24px;
+    cursor          : pointer;
+    border          : var(--borderStyle);
+    border-radius   : var(--radius);
+    background-color: #ffffff;
+    transition      : background-color .5s ease;
 }
 
 
-#container a:hover {
+#container .projectBox:hover {
     background-color: aquamarine;
 }
 
 
-
-#container a span {
-    position                  : absolute;
-    left                      : 0px;
-    top                       : 0px;
-    width                     : 22px;
-    height                    : 20px;
-    display                   : grid;
-    place-items               : center;
-    font-size                 : 12px;
-    line-height               : 20px;
-    font-weight               : bold;
-    color                     : rgb(17, 137, 17);
-    border-bottom             : 1px rgb(5, 86, 179) dashed;
-    border-right              : 1px rgb(5, 86, 179) dashed;
-    border-bottom-right-radius: 4px;
-    transition                : .2s ease;
+#container .projectBox .anchorLink {
+    display: block;
+    width  : 100% !important;
+    padding: 24px 14px 16px;
+    height : 100%;
+    color  : rgb(29, 29, 29);
 }
 
 
-#container a:hover span {
-    color: rgb(176, 6, 6)
+#container .projectBox .projectContext,
+#container .projectBox .projectNumber {
+    position     : absolute;
+    top          : 0px;
+    display      : grid;
+    place-items  : center;
+    font-size    : 12px;
+    line-height  : 20px;
+    font-weight  : bold;
+    color        : #118911;
+    border-bottom: var(--borderStyle);
+    transition   : .2s ease;
+}
+
+
+#container .projectBox .projectNumber {
+    left                      : 0px;
+    width                     : 22px;
+    border-right              : var(--borderStyle);
+    border-bottom-right-radius: var(--radius);
+}
+
+
+#container .projectBox .projectContext {
+    right                    : 0px;
+    padding                  : 0 5px;
+    border-left              : var(--borderStyle);
+    border-bottom-left-radius: var(--radius);
+}
+
+
+#container .projectBox:hover .projectContext,
+#container .projectBox:hover .projectNumber {
+    color: #b00606
 }
