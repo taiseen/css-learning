@@ -254,6 +254,11 @@ const projects = [
         link: './projects/OptimisticWeb/BoxDecorations/index.html',
         context: 'Css',
     },
+    {
+        name: 'Expandable SearchBar',
+        link: './projects/OptimisticWeb/ExpandableSearchBar/index.html',
+        context: 'Css',
+    },
 ]
 
 export default projects;
