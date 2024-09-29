@@ -259,6 +259,11 @@ const projects = [
         link: './projects/OptimisticWeb/ExpandableSearchBar/index.html',
         context: 'Css',
     },
+    {
+        name: 'Sticky Sidebar',
+        link: './projects/OptimisticWeb/StickySidebar/index.html',
+        context: 'Css',
+    },
 ]
 
 export default projects;
