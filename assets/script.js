@@ -34,7 +34,7 @@ projects.forEach((project, idx) => {
     spanContext.textContent = project.context;
 
 
-    // anchor.setAttribute('href', project.link); // 🔴🔴🔴 for local live link
+    // anchorLink.setAttribute('href', project.link); // 🔴🔴🔴 for local live link
     anchorLink.setAttribute('href', `${gitUrl}${project.link}`); // 🔴🔴🔴 for gitHub live link
     anchorLink.setAttribute('rel', 'noopener noreferrer');
     anchorLink.setAttribute('target', '_blank');
