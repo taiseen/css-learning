@@ -1,0 +1,118 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior           : smooth;
+    /* scroll-padding         : 12.5rem 0 0 0; */
+    /* scroll-padding-top     : 12.5rem; */
+    scroll-padding-block-start: 12.5rem;
+}
+
+@media (min-width: 626px) {
+    html {
+        /* scroll-padding-top: 10rem; */
+        scroll-padding-block-start: 10rem;
+    }
+}
+
+body {
+    font-family     : system-ui, sans-serif;
+    font-size       : 16px;
+    line-height     : 1.7;
+    color           : #333;
+    background-color: #fff;
+}
+
+h2 {
+    font-size    : 1.25rem;
+    margin-bottom: 1rem;
+}
+
+h2:not(:first-child) {
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+header {
+    position: fixed;
+    width   : 100%;
+
+    /* opacity: 0.5; */
+}
+
+.announcement-bar {
+    padding         : 0.75rem 10vw;
+    font-size       : 0.9375rem;
+    text-align      : center;
+    color           : #fff;
+    background-image: linear-gradient(to right, #90c3fd, #ba71ff, #ff71b8);
+}
+
+.site-header-main {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    flex-flow       : wrap;
+    gap             : 1rem 2rem;
+    padding         : 1.25rem 10vw;
+    background-color: #fff;
+    box-shadow      : 0 1px 0 1px #eee;
+}
+
+.site-header-logo h1 {
+    font-size  : 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display    : flex;
+    align-items: center;
+    gap        : clamp(0.5rem, 2.5vw, 3rem);
+}
+
+nav a {
+    font-weight    : 500;
+    color          : #333;
+    text-decoration: none;
+    transition     : color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #b366fc;
+}
+
+main {
+    padding: 12.5rem 10vw 2rem;
+}
+
+section{
+    border: 1px solid #aaa;
+}
+
+section pre{
+    text-wrap: wrap;
+    z-index: -1;
+    background-color: #eee;
+}
+
+@media (min-width: 626px) {
+    main {
+        padding-top: 10rem;
+    }
+}
+
+footer {
+    height: 15rem;
+    background: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 15px,
+            #bddafa 15px,
+            #bddafa 16px);
+}

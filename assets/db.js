@@ -269,6 +269,11 @@ const projects = [
         link: './projects/OptimisticWeb/ExpandableSidebar/index.html',
         context: 'Css + Js',
     },
+    {
+        name: 'Scroll Padding',
+        link: './projects/OptimisticWeb/ScrollPadding/index.html',
+        context: 'Css',
+    },
 ]
 
 export default projects;
