@@ -39,9 +39,62 @@ body {
 }
 
 
-h1 {
-    text-align   : center;
-    margin-bottom: 12px;
+header {
+    padding        : 0 1rem;
+    display        : flex;
+    flex-wrap      : wrap;
+    gap            : 12px;
+    justify-content: space-between;
+    align-items    : center;
+    margin-bottom  : 12px;
+
+
+    .filter {
+        scale          : 0;
+        user-select    : none;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        gap            : 8px;
+        border         : 1px solid var(--topBorderColor);
+        padding        : 4px 5px;
+        border-radius  : 25px;
+
+
+        p {
+            padding      : 5px 10px;
+            cursor       : pointer;
+            transition   : all 0.3s ease;
+            border-radius: 25px;
+            border       : 1px solid var(--topBorderColor);
+
+            &:hover {
+                background-color: var(--topBorderColor);
+                color           : white;
+            }
+
+            &.active {
+                background-color: var(--topBorderColor);
+                color           : white;
+            }
+        }
+    }
+
+    input {
+        padding      : 4px 5px 3px;
+        width        : 300px;
+        font-size    : 18px;
+        border       : 1px solid var(--topBorderColor);
+        border-radius: 1px;
+        border-radius: 6px;
+    }
+}
+
+
+.highlight {
+    background-color: var(--topBorderColor);
+    font-weight     : bold;
+    color           : white;
 }
 
 

@@ -1,7 +1,8 @@
 import projects from './db.js';
 
-const container = document.getElementById('container');
 const totalProject = document.getElementById('totalProject');
+const searchInput = document.getElementById('searchInput');
+const container = document.getElementById('container');
 
 totalProject.innerText = projects.length;
 
@@ -23,8 +24,22 @@ const getBaseUrl = () => {
 const baseUrl = getBaseUrl();
 
 
+// Helper function to safely highlight matching text without breaking the UI
+const highlightText = (text, match) => {
+    if (!match) return text; // If no match, return original text
+
+    const regex = new RegExp(`(${match})`, 'gi'); // Case-insensitive regex for the match
+    const splitText = text.split(regex); // Split text by the matching parts
+
+    // Wrap matching parts in span and reassemble
+    return splitText.map((part) =>
+        regex.test(part) ? `<span class="highlight">${part}</span>` : part
+    ).join('');
+};
+
+
 // Function to render projects in the UI
-const renderAllProjectsInUI = (projectsToDisplay) => {
+const renderAllProjectsInUI = (projectsToDisplay, match = '') => {
 
     // Clear the container before rendering new results
     container.innerHTML = '';
@@ -55,7 +70,9 @@ const renderAllProjectsInUI = (projectsToDisplay) => {
         anchorLink.setAttribute('href', `${baseUrl}${project.link}`); // Dynamically set the URL
         anchorLink.setAttribute('rel', 'noopener noreferrer');
         anchorLink.setAttribute('target', '_blank');
-        anchorLink.textContent = project.name; // Set the inner text of the anchor
+
+        // Set the inner text of the anchor
+        anchorLink.innerHTML = highlightText(project.name, match); // Highlight match only for project name
 
 
         // Append elements
@@ -77,3 +94,23 @@ const renderAllProjectsInUI = (projectsToDisplay) => {
 
 
 renderAllProjectsInUI(projects);
+
+
+const handleSearch = (e) => {
+    const userInput = e.target.value.toLowerCase();
+
+    // Filter the projects based on user input (matching project name only)
+    const filteredProjects = projects.filter((project) =>
+        project.name.toLowerCase().includes(userInput) // Match only in project name (anchor link)
+    );
+
+    // Render the filtered projects
+    renderAllProjectsInUI(filteredProjects, userInput);
+
+    // Update total project count for filtered results
+    totalProject.innerText = filteredProjects.length;
+}
+
+
+// Search input listener to filter projects
+searchInput.addEventListener('input', handleSearch);
