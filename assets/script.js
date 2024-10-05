@@ -2,9 +2,49 @@ import projects from './db.js';
 
 const totalProject = document.getElementById('totalProject');
 const searchInput = document.getElementById('searchInput');
+const filterItems = document.querySelectorAll('.filter p');
 const container = document.getElementById('container');
 
+
 totalProject.innerText = projects.length;
+
+
+filterItems.forEach(pTag => {
+
+    pTag.addEventListener('click', () => {
+        // 🟢 1st:- Remove 'active' class from all items
+        filterItems.forEach(tag => tag.classList.remove('active'));
+
+        // 🟢 2nd:- Add 'active' class to the clicked item
+        pTag.classList.add('active');
+
+        // Get the clicked filter value
+        const filterValue = pTag.textContent.toLowerCase(); // Ensure case-insensitivity
+
+        // Filter projects based on context
+        let filteredProjects;
+
+        if (filterValue === 'all') {
+            // Show all projects when "all" is clicked
+            filteredProjects = projects;
+        } else {
+            // Filter projects exactly by context
+            filteredProjects = projects.filter(project => {
+
+                // Convert context and filter to lowercase for matching
+                const contexts = project.context.toLowerCase().split('+')[1];
+
+                return contexts
+                    ? contexts.includes(filterValue)
+                    : project.context.toLowerCase().includes(filterValue);
+            });
+        }
+
+        renderAllProjectsInUI(filteredProjects);
+        totalProject.innerText = filteredProjects.length;
+
+    });
+});
 
 
 // checking this project is running at live || local?
