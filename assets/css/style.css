@@ -19,6 +19,22 @@
 }
 
 
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+html::-webkit-scrollbar-thumb {
+    border-radius   : 2px;
+    background-image: linear-gradient(transparent, var(--topBorderColor) 70%);
+}
+
+
+html::-webkit-scrollbar-track {
+    background-image: linear-gradient(transparent, var(--bgColor) 70%)
+}
+
+
 body {
     padding              : 1rem;
     font-family          : "Nunito", sans-serif;
