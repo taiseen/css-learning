@@ -274,6 +274,11 @@ const projects = [
         link: './projects/OptimisticWeb/ScrollPadding/index.html',
         context: 'Css',
     },
+    {
+        name: 'Table v5 - Multi Function',
+        link: './projects/ResponsiveTable/table-v5/index.html',
+        context: 'Css + Js',
+    },
 ]
 
 export default projects;
