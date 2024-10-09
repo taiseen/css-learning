@@ -5,7 +5,7 @@ const tableData = [
         location: "New York, USA",
         date: "31 Dec, 2024",
         status: "Delivered",
-        amount: "$128.90",
+        amount: 128.90,
         img: "./assets/img/user/Zinzu Chan Lee.jpg"
     },
     {
@@ -14,7 +14,7 @@ const tableData = [
         location: "London, UK",
         date: "30 Dec, 2024",
         status: "Pending",
-        amount: "$5350.50",
+        amount: 5350.50,
         img: "./assets/img/user/Jeet Saru.jpg"
     },
     {
@@ -23,7 +23,7 @@ const tableData = [
         location: "Mumbai, India",
         date: "28 Dec, 2024",
         status: "Cancelled",
-        amount: "$210.40",
+        amount: 210.40,
         img: "./assets/img/user/Sonal Gharti.jpg"
     },
     {
@@ -32,7 +32,7 @@ const tableData = [
         location: "Tokyo, Japan",
         date: "25 Dec, 2024",
         status: "Shipped",
-        amount: "$149.70",
+        amount: 149.70,
         img: "./assets/img/user/Alson GC.jpg"
     },
     {
@@ -41,7 +41,7 @@ const tableData = [
         location: "Sydney, Australia",
         date: "24 Dec, 2024",
         status: "Pending",
-        amount: "$399.99",
+        amount: 399.99,
         img: "./assets/img/user/Sarita Limbu.jpg"
     },
     {
@@ -50,7 +50,7 @@ const tableData = [
         location: "Toronto, Canada",
         date: "22 Dec, 2024",
         status: "Cancelled",
-        amount: "$399.99",
+        amount: 399.99,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -59,7 +59,7 @@ const tableData = [
         location: "Dhaka, Bangladesh",
         date: "20 Dec, 2024",
         status: "Delivered",
-        amount: "$399.99",
+        amount: 399.99,
         img: "./assets/img/user/Alson GC.jpg"
     },
     {
@@ -68,7 +68,7 @@ const tableData = [
         location: "Beijing, China",
         date: "19 Dec, 2024",
         status: "Pending",
-        amount: "$149.70",
+        amount: 149.70,
         img: "./assets/img/user/Sarita Limbu.jpg"
     },
     {
@@ -77,7 +77,7 @@ const tableData = [
         location: "Los Angeles, USA",
         date: "18 Dec, 2024",
         status: "Shipped",
-        amount: "$249.99",
+        amount: 249.99,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -86,7 +86,7 @@ const tableData = [
         location: "Islamabad, Pakistan",
         date: "17 Dec, 2024",
         status: "Cancelled",
-        amount: "$249.99",
+        amount: 249.99,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -95,7 +95,7 @@ const tableData = [
         location: "San Francisco, USA",
         date: "15 Nov, 2023",
         status: "Delivered",
-        amount: "$350.00",
+        amount: 350.00,
         img: "./assets/img/user/Zinzu Chan Lee.jpg"
     },
     {
@@ -104,7 +104,7 @@ const tableData = [
         location: "Seoul, South Korea",
         date: "12 Nov, 2023",
         status: "Pending",
-        amount: "$890.00",
+        amount: 890.00,
         img: "./assets/img/user/Jeet Saru.jpg"
     },
     {
@@ -113,7 +113,7 @@ const tableData = [
         location: "Mumbai, India",
         date: "10 Oct, 2023",
         status: "Cancelled",
-        amount: "$650.75",
+        amount: 650.75,
         img: "./assets/img/user/Sonal Gharti.jpg"
     },
     {
@@ -122,7 +122,7 @@ const tableData = [
         location: "Toronto, Canada",
         date: "5 Sep, 2023",
         status: "Shipped",
-        amount: "$1200.50",
+        amount: 1200.50,
         img: "./assets/img/user/Alson GC.jpg"
     },
     {
@@ -131,7 +131,7 @@ const tableData = [
         location: "Tokyo, Japan",
         date: "1 Aug, 2023",
         status: "Pending",
-        amount: "$700.00",
+        amount: 700.00,
         img: "./assets/img/user/Sarita Limbu.jpg"
     },
     {
@@ -140,7 +140,7 @@ const tableData = [
         location: "Los Angeles, USA",
         date: "15 Jul, 2023",
         status: "Delivered",
-        amount: "$850.25",
+        amount: 850.25,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -149,7 +149,7 @@ const tableData = [
         location: "Dhaka, Bangladesh",
         date: "10 Jun, 2023",
         status: "Cancelled",
-        amount: "$500.50",
+        amount: 500.50,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -158,7 +158,7 @@ const tableData = [
         location: "Beijing, China",
         date: "25 May, 2023",
         status: "Shipped",
-        amount: "$400.00",
+        amount: 400.00,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -167,7 +167,7 @@ const tableData = [
         location: "Sydney, Australia",
         date: "15 Apr, 2023",
         status: "Pending",
-        amount: "$950.00",
+        amount: 950.00,
         img: "./assets/img/user/Alex Gonley.jpg"
     },
     {
@@ -176,7 +176,7 @@ const tableData = [
         location: "Mumbai, India",
         date: "1 Jan, 2023",
         status: "Delivered",
-        amount: "$1200.00",
+        amount: 1200.00,
         img: "./assets/img/user/Alex Gonley.jpg"
     }
 ];

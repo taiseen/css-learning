@@ -21,7 +21,7 @@ const generateTableRows = (dataArray) => {
                 </p>
             </td>
             <td>
-                <strong>${item.amount}</strong>
+                <strong>$${item.amount}</strong>
             </td>
       `;
 
